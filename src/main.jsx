@@ -11,6 +11,7 @@ import Home from "./components/Home/Home.jsx";
 import Blogs from "./components/Blogs/blogs.jsx";
 import Statictic from "./Statictic/Statictic.jsx";
 import Jobs from "./components/Jobs/Jobs.jsx";
+import JobDetails from "./components/JobDetails/JobDetails.jsx";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -18,7 +19,7 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage/>,
     children: [
       {
-        path: "/home",
+        path: "/",
         element: <Home></Home>,
       },
       {
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
       {
         path: "/jobs",
         element: <Jobs></Jobs>,
+      },
+      {
+        path: "/jobs/:jobId",
+        element: <JobDetails></JobDetails>
       },
       {
         path: "/blogs",
